@@ -1,9 +1,15 @@
 package tps.bateria;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Observable {
     private List<Observer> observers;
+
+    public Observable() {
+        this.observers = new ArrayList<>();
+    }
+
     public void suscribirse(Observer observer) {
         this.observers.add(observer);
     }
